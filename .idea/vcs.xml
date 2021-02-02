@@ -2,5 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
+=======
+    <mapping directory="$PROJECT_DIR$/Instagram" vcs="Git" />
+>>>>>>> ba5e5faf04cbd479850a23feb6089320b5862469
   </component>
 </project>

@@ -1,7 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import * as firebase from 'firebase';
 import React, { Component } from 'react'
-
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import rootReducer from './redux/reducers'
+import thunk from 'redux-thunk'
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
 const firebaseConfig = {
   apiKey: "AIzaSyDKQoiNJ-9FgoI06101_ug2cZjMT7DO3fs",
@@ -23,7 +27,10 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import LandingScreen from './components/auth/Landing';
 import RegisterScreen from './components/auth/Register';
-//import LoginScreen from './components/auth/Login'
+import LoginScreen from './components/auth/Login'
+import MainScreen from './components/Main'
+
+const Stack = createStackNavigator();
 
 export class App extends Component {
   constructor(props) {
@@ -65,16 +72,16 @@ export class App extends Component {
           <Stack.Navigator initialRouteName = "Landing">
             <Stack.Screen name = "Landing" component = { LandingScreen } options = {{ headerShown: false }}/>
             <Stack.Screen name = "Register" component = { RegisterScreen } options = {{ headerShown: false }}/>
-            //<Stack.Screen name = "Login" component = { LoginScreen } options = {{ headerShown: false }}/>
+            <Stack.Screen name = "Login" component = { LoginScreen } options = {{ headerShown: false }}/>
           </Stack.Navigator>
         </NavigationContainer>
       ); 
     }
 
     return(
-      <View style = {{ flex: 1, justifyContent: 'center' }}>
-        <Text>User is Logged In</Text>
-      </View>
+      <Provider store = { store }>
+        <MainScreen/>
+      </Provider>
     )
   }
 }
