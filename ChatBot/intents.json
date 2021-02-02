@@ -14,7 +14,7 @@
 		{
 			"tag" : "goodbye",
 			"patterns" : ["see ya", "goodbye", "see you later", "cya", "bye", "bui", "have a good day", "ciao"],
-			"responses" : ["*Sad R2-D2 noises*", "Talk to you later!", "Goodbye!"]
+			"responses" : ["*Sad R2-D2 noises*", "Talk to you later!", "Goodbye!", "Bye bye!"]
 		}
 	]
 }
