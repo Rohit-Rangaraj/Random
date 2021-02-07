@@ -9,7 +9,7 @@
 		{
 			"tag" : "starwars",
 			"patterns" : ["hello there"],
-			"responses" : "GeNerAL KeNOBi?!"			
+			"responses" : ["GeNerAL KeNOBi?!"]
 		},
 		{
 			"tag" : "goodbye",
