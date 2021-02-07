@@ -8,7 +8,7 @@
 		},
 		{
 			"tag" : "starwars",
-			"patterns" : "hello there",
+			"patterns" : ["hello there"],
 			"responses" : "GeNerAL KeNOBi?!"			
 		},
 		{
