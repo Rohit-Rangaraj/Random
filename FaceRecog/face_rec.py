@@ -86,6 +86,7 @@ def classify_face(im):
             return face_names 
 
 
-print(classify_face("test.jpg"))
+f1 = input()
+print(classify_face(f1))
 
 
