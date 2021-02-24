@@ -86,7 +86,7 @@ def classify_face(im):
             return face_names 
 
 
-f1 = input()
+f1 = input("Enter test file name: ")
 print(classify_face(f1))
 
 
